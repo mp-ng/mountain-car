@@ -2,6 +2,8 @@ import gym
 import numpy as np
 import matplotlib.pyplot as plt
 
+np.random.seed(0)
+
 env = gym.make("MountainCar-v0")
 
 LEARNING_RATE = 0.1
@@ -76,6 +78,7 @@ for episode in range(EPISODES + 1):
 	ep_rewards.append(episode_reward)
 
 	if episode % STATS_EVERY == 0:
+		np.save(f"../qtables/{episode}-qtable.npy", q_table)
 		recent_eps = ep_rewards[-STATS_EVERY:]
 		average_reward = sum(recent_eps) / len(recent_eps)
 		aggr_ep_rewards['ep'].append(episode)
