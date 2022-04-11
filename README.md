@@ -5,6 +5,6 @@ The graph _rewards-trend_ shows the trend in average rewards, minimum rewards an
 
 ![Rewards Image](./graphs/rewards-trend.png)
 
-The graph _action-choice_ shows the action with the highest q-value under specific a specific state in the environment, i.e. what is the best action to take at that state.
+The graph _action-choice_ shows the action with the highest q-value under specific a specific state in the environment. This graph would correspond to a q-table computed at a specific episode.
 
 ![Actions Image](./graphs/action-choice.png)
